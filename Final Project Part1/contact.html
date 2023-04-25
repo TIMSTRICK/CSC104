@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <!-- Seperate CSS file for this Page Specifically -->
+        <link rel="stylesheet" href="contact.css">
+        <script src="main.js" defer></script>
+        <title>Landing Zone</title>
+        <meta charset="utf-8" lang="en">
+    </head>
+    <body>
+        <div class="left"></div>
+        <div class="right"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <header>
+                <nav>
+                    <ul>
+                        <li>
+                        <a href="index.html">
+                            <span class="tooltip" title="Home">Home</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="aboutme.html">
+                            <span class="tooltip" title="About">About Me</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="contact.html">
+                            <span class="tooltip" title="Contact">Contact Me</span>
+                        </a>
+                        </li>
+                    </ul>
+                    </nav>
+            </header>
+            <h1 style="text-align: center;">Contact Me</h1>
+             
+                <h3 id="before" style="text-align: center; color: red; font-weight: bolder;">Please Fill out this form for me to be able to contact you.</h3>
+            <div class="contact-form">
+                <!-- 
+                    If I ever decided to add Form handling I would use PHP in the action slot 
+                -->
+                <form action="" method="post" id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <fieldset>
+                        <legend>Reason for Contact:</legend>
+                        <input type="radio" id="business" name="reason" value="Business" required>
+                        <label for="business">Business</label><br>
+                        <input type="radio" id="casual" name="reason" value="Casual" required>
+                        <label for="casual">Casual</label><br>
+                    </fieldset>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <script>
+                function handleFormSubmit(event) {
+                    event.preventDefault(); // prevent the default form submission behavior
+            
+                    // get the user's name from the form input with id "name"
+                    const nameInput = document.querySelector('#name');
+                    const name = nameInput.value;
+            
+                    // replace the form with the thank you message
+                    const contactForm = document.querySelector('#contact-form');
+                    contactForm.innerHTML = `<p>Thank you ${name}, I will be in contact with you soon.</p>`;
+                }
+            
+                const form = document.querySelector('#contact-form');
+                form.addEventListener('submit', handleFormSubmit);
+            </script>
+
+        
+        </div>
+    </body>  
+  </html>

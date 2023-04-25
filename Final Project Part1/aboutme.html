@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <!-- Seperate CSS file for this Page Specifically -->
+        <link rel="stylesheet" href="about.css">
+        <script src="main.js" defer></script>
+        <title>About Tim</title>
+        <meta charset="utf-8" lang="en">
+    </head>
+    <body>
+        <div class="left"></div>
+        <div class="right"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <header>
+                <nav>
+                <ul>
+                    <li>
+                    <a href="index.html">
+                        <span class="tooltip" title="Home">Home</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="aboutme.html">
+                        <span class="tooltip" title="About">About Me</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="contact.html">
+                        <span class="tooltip" title="Contact">Contact Me</span>
+                    </a>
+                    </li>
+                </ul>
+                </nav>
+            </header>
+            <h1 style="text-align: center;">About Me</h1>
+            
+            
+
+            <div class="aboutsection">
+                <p>
+                    Hello! My name is Timothy Strickland. I am 19 years old while writing this. I love programming/ coding.
+                </p>
+                <p>
+                    I have a wonderful family of 4: My two parents, brother, and myself.
+                </p>    
+                <p>
+                    While I was growing up, I lived in Virginia, I had many friends and I participated in many activities/ hobbies. <br><br> These activities/ hobbies include but are not limited to:
+                    
+                    <ul style="border: 1px solid #ccc; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                        <li>Playing Sports</li>
+                            <ul>
+                                <li>Basketball (5 years total)</li>
+                                <li>Soccer (1 year)</li>
+                                <li>Tennis (Off and on for a few years)</li>
+                            </ul>
+                        <li>Learning Musical Instruments</li>
+                            <ul>
+                                <li>Wind instruments</li>
+                                    <ul>
+                                        <li>Recorder (In Elemantary School)</li>
+                                    </ul>
+                                <li>Stringed instruments</li>
+                                <ul>
+                                    <li>Guitar (Fall of 2013)</li>
+                                    <li>Ukulele (Same year)</li>
+                                    <li>Bass (Late 2015)</li>
+                                    <li>Piano (Early 2016)</li>
+                                </ul>
+                                <li>Percussion Instruments</li>
+                                <ul>
+                                    <li>Drums (Mid 2017)</li>
+                                </ul>
+                            </ul>
+                            <li>Gaming</li>
+                            <li>Attending Church Related Activities</li>
+                        </ul> 
+                    </p>
+                    <p>
+                        In June of 2018, my parents and I moved to Costa Rica where we lived for four years as tourists. This means that every 30-90 days, we would have to either: <strong>A)</strong> Drive north to the border of Niqueragua and Costa Rica, or <strong>B)</strong> Fly back into the United States to visit family.  
+                    </p>
+                    <p>
+                        I learned many things while I was in Costa Rica, the most important thing I learned was the exotic language of Spanish. 
+                    </p>
+                </div>
+                
+            <div class="hobbies">
+                <h3>Some of my Favorite Hobbies include:</h3>
+                <ul>
+                    <li>Coding</li>
+                    <li>Gaming</li>
+                    <li>Playing my Guitar</li>
+                    <li>Playing Disc Golf</li>
+                </ul>
+            </div>
+
+            <div class="slideshow-container">
+                <div class="slideshow-slide">
+                  <img src="Self_Images/TimsGraduation-1.jpg" alt="TimsGraduation-1">
+                </div>
+                <div class="slideshow-slide">
+                  <img src="Self_Images/TimsGraduation-4.jpg" alt="TimsGraduation-4">
+                </div>
+                <div class="slideshow-slide">
+                    <img src="Self_Images/TimsGraduation-7.jpg" alt="TimsGraduation-7">
+                </div>
+                <div class="slideshow-slide">
+                    <img src="Self_Images/TimsGraduation-9.jpg" alt="TimsGraduation-9">
+                </div>
+            <!-- If I ever Decide to add more images 
+                Template:
+
+                    <div class="slideshow-slide">
+                        <img src="Self_Images/TimsGraduation-.jpg" alt="TimsGraduation-">
+                    </div>
+
+            -->
+              
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+              <script>
+                // Initialize the slideIndex variable to 1 and call the showSlides function to display the first slide
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Define the plusSlides function to increment or decrement the slideIndex variable based on the direction of the navigation
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                // Define the showSlides function to display the slide corresponding to the current slideIndex value and hide the others
+                function showSlides(n) {
+                let i;
+                const slides = document.getElementsByClassName("slideshow-slide");
+                
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+                // Hide all slides and remove the active-slide class from them
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                    slides[i].classList.remove("active-slide");
+                }
+                // Show the current slide and add the active-slide class to it
+                slides[slideIndex - 1].style.display = "block";
+                slides[slideIndex - 1].classList.add("active-slide");
+                }
+              </script>
+             
+
+        
+        </div>
+    </body>  
+  </html>
