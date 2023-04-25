@@ -1,0 +1,108 @@
+/* Set the position and size of the slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 25%;
+    padding: 1%;
+    float: right;
+    right: 10%;
+}
+
+/* Hide all slideshow slides */
+.slideshow-slide {
+    display: none;
+    text-align: center;
+}
+
+/* Set the maximum width of the slideshow images to 100%, maintain their aspect ratio, and center them within their containers */
+.slideshow-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Style the navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the next button on the right side and set its border radius */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Change the background color of the navigation buttons on hover */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Show the current slide */
+.active-slide {
+    display: block;
+}
+/* Set the style for the section containing the about information */
+div.aboutsection {
+width: 50%; /* Set the width of the section to 50% of the parent element */
+float: left; /* Float the section to the left so other content can be displayed beside it */
+padding-left: 1.5em; /* Add padding to the left side of the section to create some space between content */
+}
+
+/* Set the style for the paragraphs within the about section */
+.aboutsection p{
+text-indent: 2em; /* Indent the first line of each paragraph by 2em */
+font-size: 1.5em; /* Set the font size of the paragraphs to 1.5em */
+}
+
+/* Style the aside */
+
+.hobbies{
+    background-color: rgb(227, 202, 14);
+    margin-right: 25px;
+    padding: 10px 10px 10px 10px;
+    float: right;
+    position: relative;
+    right: 6.5%;
+  }
+  
+
+/* Style the container for the sound recordings */
+#soundRecordings{
+    border: 1px solid #ccc; /* Add a border with a light gray color */
+    border-radius: 10px; /* Add rounded corners to the container */
+    padding: 20px; /* Add some padding to the container */
+    margin: 20px; /* Add some margin around the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow with a light opacity */
+    float: left; /* Float the container to the left */
+}
+
+/* Style the links */
+#soundRecordings a {
+    display: block; /* Change the display property to block to fill the entire width */
+    padding: 10px; /* Add some padding to the links */
+    margin-left: 10px; /* Add some left margin to the links */
+    margin-right: 10px; /* Add some right margin to the links */
+    text-decoration: none; /* Remove the underline decoration */
+    background-color: #ccc; /* Set the background color to a light gray */
+    width: fit-content; /* Set the width of the links to fit the content */
+    float: left; /* Float the links to the left */
+    border-top-left-radius: 10px; /* Add rounded corners to the top left of the links */
+    border-top-right-radius: 10px; /* Add rounded corners to the top right of the links */
+    border: 1px solid #ccc; /* Add a border with a light gray color */
+}
+
+/* Style the active link */
+#soundRecordings a.active {
+    background-color: #fff; /* Change the background color to white */
+    border-bottom-color: #fff; /* Change the border color to white on the bottom */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Add a box shadow to the active link */
+}
+

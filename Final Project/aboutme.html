@@ -122,7 +122,20 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
 
-              <script>
+              
+             
+             <div id="soundRecordings">
+                <h3>Here are some demos of the songs I have written.</h3>
+                <a onclick="songSelect('Natalie');" href="#soundRecordings" class="active">Natalie</a>
+                <a onclick="songSelect('Memories');" href="#soundRecordings" class="active">Memories</a>
+                <a onclick="songSelect('WTDGC');" href="#soundRecordings" class="active">When The Days Grow Cold</a>
+                <br><br><br>
+                <div id="songSelect"></div>
+             </div>
+
+
+             
+             <script>
                 // Initialize the slideIndex variable to 1 and call the showSlides function to display the first slide
                 let slideIndex = 1;
                 showSlides(slideIndex);
@@ -152,9 +165,33 @@
                 slides[slideIndex - 1].style.display = "block";
                 slides[slideIndex - 1].classList.add("active-slide");
                 }
-              </script>
-             
 
+                // Function for selecting a song and updating the HTML element with the corresponding audio source
+                function songSelect(song){
+
+                    // Remove active class from all links
+                    var links = document.querySelectorAll('#soundRecordings a');
+                    links.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    
+                    let songChoice = song.toString(); // Convert input to string for comparison
+
+                    if(songChoice === 'Natalie'){
+                        // Update the HTML element with audio source for Natalie song
+                        document.getElementById('songSelect').innerHTML = '<audio controls><source src="Natalie_1min_demo.mp3" type="audio/mp3"></audio>';
+                    } else if(songChoice === 'Memories'){
+                        // Update the HTML element with audio source for Memories song
+                        document.getElementById('songSelect').innerHTML = '<audio controls><source src="Memories_1min_demo.mp3" type="audio/mp3"></audio>';
+                    } else if(songChoice === 'WTDGC'){
+                        // Update the HTML element with audio source for WTDGC song
+                        document.getElementById('songSelect').innerHTML = '<audio controls><source src="When_The_Days_Grow_Cold_1min_demo.mp3" type="audio/mp3"></audio>';
+                    }
+
+                    // Add active class to the clicked link
+                    event.target.classList.add('active');
+                }
+              </script>
         
         </div>
     </body>  
